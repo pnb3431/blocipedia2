@@ -2,9 +2,11 @@
 <br>
  <div class="jumbotron">
    <h1>Blocipedia: Social, Markdown Wikis</h1>
+   <% if user_signed_in? %>
    
+   <% else %>
    <p><a href="/users/sign_up" class="btn btn-primary btn-lg" role="button">Sign Up!</a></p>
-   
+   <% end %>
  </div>
  
  <div class="row">
