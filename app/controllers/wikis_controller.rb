@@ -1,6 +1,6 @@
 class WikisController < ApplicationController
   def index
-    @wiki = Wiki.all
+    @wikis = Wiki.all
   end
 
   def show
