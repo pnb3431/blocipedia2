@@ -8,8 +8,7 @@ class User < ActiveRecord::Base
   
   has_many :wikis
 
-  validates :email, presence: true
-  validates :password, presence: true
+  
   validates :role, presence: true
 
   enum role: [:standard, :premium, :admin]
