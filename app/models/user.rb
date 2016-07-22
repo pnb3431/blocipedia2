@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 
   
   validates :role, presence: true
+  
 
   enum role: [:standard, :premium, :admin]
 

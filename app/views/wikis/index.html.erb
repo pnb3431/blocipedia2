@@ -7,7 +7,7 @@
         <div>
           <% if !wiki.private? || (wiki.private? && current_user.present?) %>
             <h4><%= link_to wiki.title, wiki %></h4>
-            <small>submitted <%= time_ago_in_words(wiki.created_at) %> ago by <%= wiki.user.email %></small>
+            <small>submitted <%= time_ago_in_words(wiki.created_at) %> ago by <%= wiki.user.email %> <%= wiki.private %></small>
           <% end %>
         </div>
       <% end %>
