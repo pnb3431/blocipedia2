@@ -7,4 +7,5 @@ class Wiki < ActiveRecord::Base
 
   scope :public_wikis, -> { where(private: false) }
   scope :visible_to, -> (user) { user ? all : public_wikis }
+  
 end
