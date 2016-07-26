@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-4">
+    <div class="media-left">
+      <h2>Remove Collaborators from your Wiki</h2>
+    </div>
+  </div>
+
+<br/>
+
+  <div class="col-md-8">
+    <table class="table">
+
+    <% @collaborators.each do |collaborator| %>
+      <div class="media">
+        <div class="media-body">
+          <tr>
+            <td><%= collaborator.username %></td>
+            <td><small>Collaborating on: <%= link_to @wiki.title.truncate_words(10), @wiki %></small></td>
+            <td><%= link_to "Remove", wiki_collaboration_path(@wiki, collaborator.collaborations.find_by(wiki_id: @wiki.id)),
+              method: :delete, class: 'btn btn-xs btn-danger' %></td>
+          </tr>
+        </div>
+      </div>
+    <% end %>
+
+    </table>
+  </div>
+</div>
